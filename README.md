@@ -1,52 +1,215 @@
-# Workday Companion
+# AI Workplace Productivity Assistant
 
-Build a modern, responsive web application called AI Workplace Productivity Assistant to help professionals generate emails, summarize meetings, and plan tasks efficiently.
+A modern, responsive SaaS-style productivity dashboard designed to help professionals streamline workplace tasks using AI-powered tools. The application enables users to generate professional emails, summarize meeting notes, and create structured task plans from a single intuitive interface.
 
-Design
+## Project Overview
 
-Use a clean SaaS design with light-grey backgrounds, dark-charcoal text, white cards, subtle shadows, rounded corners, professional typography, and a responsive layout for desktop, tablet, and mobile.
+The AI Workplace Productivity Assistant is a frontend-only web application built with React and Tailwind CSS. It provides three productivity tools that help users save time and improve organization in their daily work.
 
- Dashboard
+The application features a clean and professional dashboard with a responsive layout that works seamlessly across desktop, tablet, and mobile devices.
 
-Create a sidebar with Dashboard, Email Generator, Meeting Summarizer, Task Planner, and Settings. The main dashboard should include a welcome message, tool cards, quick actions, and recent outputs.
+## Features Implemented
 
-Features
+### Dashboard
+- Responsive SaaS-style user interface
+- Sidebar navigation with icons
+- Welcome section
+- Quick action cards
+- Usage statistics cards
+- Recent outputs section
 
-Smart Email Generator: Generate context-specific emails with Formal, Friendly, and Persuasive tones.
+### Smart Email Generator
+- Generate workplace emails based on user input
+- Multiple tone options:
+  - Formal
+  - Friendly
+  - Persuasive
+- Editable email output
+- Generates:
+  - Subject line
+  - Greeting
+  - Email body
+  - Closing
+- Copy functionality
+- Clear functionality
+- Regenerate functionality
 
-Meeting Notes Summarizer: Summarize pasted notes and extract decisions, action items, owners, and deadlines.
+### Meeting Notes Summarizer
+- Paste meeting notes for summarization
+- Generates:
+  - Executive summary
+  - Key decisions
+  - Action items
+  - Owners
+  - Deadlines
+  - Risks and blockers
+- Editable output
+- Copy functionality
+- Clear functionality
+- Regenerate functionality
 
-AI Task Planner: Create daily or weekly schedules based on tasks, priorities, and deadlines.
+### AI Task Planner
+- Create daily schedules
+- Create weekly schedules
+- Task prioritization support
+- Deadline management
+- Editable planning output
+- Copy functionality
+- Clear functionality
+- Regenerate functionality
 
-Make outputs editable and provide Copy, Clear, and Regenerate buttons.
+### Settings
+- AI provider configuration
+- API key input field
+- Demo mode support
+- Local browser storage for settings
 
-AI Used
+### Responsible AI Features
+- AI disclaimer displayed throughout the application
+- Demo mode notification when live AI services are unavailable
+- Guidance against entering confidential workplace information
 
-Use real AI-generated, context-aware responses through a compatible AI API if configured. Create structured prompts for each tool. Never expose secret API keys. If AI is unavailable, clearly label demo mode instead of pretending responses are AI-generated.
+## Technologies and Tools Used
 
-Requirements
+### Frontend
+- React
+- JavaScript (ES6+)
+- Tailwind CSS
+- HTML5
+- CSS3
 
-Use React and Tailwind CSS. Build a frontend-only application with no backend, database, or authentication. Store temporary data in client-side state. Ensure all navigation and buttons work, forms validate inputs, and the interface is fully responsive.
+### UI Components
+- Lucide React Icons
+- Responsive Grid Layouts
+- Reusable React Components
 
-Include a responsible AI disclaimer: users must verify generated content and avoid entering confidential workplace information.
+### State Management
+- React Hooks
+- useState
+- useEffect
 
-This project was built with [Lovable](https://lovable.dev).
+### Development Tools
+- Vite (Recommended)
+- npm
+- Git
+- GitHub
 
-## Build with Lovable
+## Project Structure
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/762b1603-5b6d-4ba7-88f4-386780041d0a).
+```text
+src/
+│
+├── components/
+│   ├── Sidebar.jsx
+│   ├── Dashboard.jsx
+│   ├── EmailGenerator.jsx
+│   ├── MeetingSummarizer.jsx
+│   ├── TaskPlanner.jsx
+│   └── Settings.jsx
+│
+├── pages/
+│
+├── assets/
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Setup Instructions
 
-## Development
+### Prerequisites
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Ensure the following software is installed:
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+- Node.js (v18 or later)
+- npm or yarn
+- Git
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/ai-workplace-productivity-assistant.git
+```
+
+### Navigate to the Project Folder
+
+```bash
+cd ai-workplace-productivity-assistant
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start the Development Server
+
+```bash
 npm run dev
 ```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## AI Configuration
+
+The application can operate in two modes:
+
+### Demo Mode
+- Available by default
+- Uses sample responses
+- Clearly indicates that outputs are not generated by a live AI service
+
+### AI Mode
+- Connects to a compatible AI API if configured
+- Generates context-aware outputs
+- API keys remain stored only on the client side
+
+## Validation Rules
+
+### Email Generator
+- Email purpose is required
+
+### Meeting Summarizer
+- Meeting notes are required
+
+### Task Planner
+- At least one task is required
+
+## Responsible AI Notice
+
+AI-generated content may be inaccurate, incomplete, or outdated. Users are responsible for reviewing and verifying all generated content before use. Do not enter confidential, sensitive, proprietary, or personal workplace information into the application.
+
+## Future Enhancements
+
+- Export outputs to PDF
+- Dark mode support
+- Templates library
+- Calendar integration
+- Drag-and-drop task management
+- Offline support
+- Additional AI productivity tools
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+Bontle Romeo Mamosebo
+
+Github:https://github.com/bontleemamosebo-ship-it/workday-companion/edit/main/README.md
+
+---
+**AI Workplace Productivity Assistant** – Helping professionals work smarter with AI-powered productivity tools.
