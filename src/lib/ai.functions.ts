@@ -14,7 +14,7 @@ export const generateContent = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => schema.parse(d))
   .handler(async ({ data }): Promise<AiResult> => {
     const input = { tool: data.tool, data: data.data } as ToolInput;
-    const key = process.env.LOVABLE_API_KEY;
+    const key = process.env["LOVABLE_API_KEY"];
     if (data.forceDemo || !key) {
       return { mode: "demo", text: demoOutput(input), notice: data.forceDemo ? "Demo mode is on in Settings." : "AI is not configured." };
     }

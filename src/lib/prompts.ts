@@ -6,8 +6,10 @@ export type ToolInput =
 const RULES =
   "Write in plain text (no markdown tables). Be concise, professional and specific to the user's context. Do not invent facts beyond what is given; mark unknowns as [TBD].";
 
+type F = Record<"tone"|"recipient"|"purpose"|"context"|"sender"|"title"|"notes"|"period"|"hours"|"tasks", string>;
+
 export function buildPrompt(input: ToolInput): { system: string; user: string } {
-  const d = input.data;
+  const d = input.data as F;
   if (input.tool === "email") {
     return {
       system: `You are an expert workplace communication assistant. Draft a complete email with a "Subject:" line, greeting, body and sign-off. Tone guide — Formal: polished and respectful; Friendly: warm and approachable; Persuasive: benefit-led with a clear call to action. ${RULES}`,
@@ -27,7 +29,7 @@ export function buildPrompt(input: ToolInput): { system: string; user: string } 
 }
 
 export function demoOutput(input: ToolInput): string {
-  const d = input.data;
+  const d = input.data as F;
   const tag = "[DEMO MODE — sample template, not AI-generated]\n\n";
   if (input.tool === "email") {
     const opener =

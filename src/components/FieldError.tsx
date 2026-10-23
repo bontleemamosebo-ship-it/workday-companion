@@ -1,4 +1,4 @@
-export function FieldError({ msg }: { msg?: string }) {
+export function FieldError({ msg }: { msg?: string | undefined }) {
   return msg ? <p className="mt-1 text-xs text-destructive">{msg}</p> : null;
 }
 

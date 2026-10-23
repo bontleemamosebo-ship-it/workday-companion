@@ -28,11 +28,11 @@ function EmailPage() {
   const { settings } = useApp();
   const g = useGenerate("email");
   const [f, setF] = useState({ tone: settings.defaultTone, recipient: "", purpose: "", context: "", sender: settings.name });
-  const [err, setErr] = useState<Record<string, string>>({});
+  const [err, setErr] = useState<{ recipient?: string; purpose?: string; context?: string }>({});
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
-    const er: Record<string, string> = {};
+    const er: { recipient?: string; purpose?: string; context?: string } = {};
     if (f.recipient.trim().length < 2) er.recipient = "Enter who the email is for.";
     if (f.purpose.trim().length < 3) er.purpose = "Describe the purpose (min 3 characters).";
     if (f.context.trim().length < 10) er.context = "Add some key points (min 10 characters).";
